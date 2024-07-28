@@ -1,0 +1,57 @@
+{% extends 'main/contest.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'main/styles2.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="contest-page" style="font-family: Arial, sans-serif; background-color: black; color: white; padding-left: 320px; padding-right: 320px; margin-top: -20px; justify-content: center;">
+    <div class="alternative-header" style="background-color: black; padding: 1em; display: flex; justify-content: center; align-items: center;">
+        <nav style="display: flex; align-items: center;">
+            <h1 style="font-size: 2em; margin: 0;">Expecto Patronum</h1>
+            <select id="level-select" onchange="location = this.value;" style="margin-left: 20px; padding: 0.5em; font-size: 1em;">
+                <option value="{% url 'contest' %}">Level 1</option>
+                <option value="{% url 'level2' %}" selected>Level 2</option>
+                <option value="{% url 'level3' %}">Level 3</option>
+                <option value="{% url 'level4' %}">Level 4</option>
+                <option value="{% url 'level5' %}">Level 5</option>
+                <option value="{% url 'level6' %}">Level 6</option>
+                <option value="{% url 'level7' %}">Level 7</option>
+            </select>            
+        </nav>
+    </div>
+    <main style="padding: 10px; justify-content: center;">
+        <section class="level-info" style="margin-bottom: 2px; margin-top: -10px; text-align: center;">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <div class="current-level-box" style="background-color: #fff; padding: 5px 10px; border-radius: 10px; display: inline-block;">
+                    <h2 style="margin: 0; color: #007BFF;">Level 2</h2>
+                </div>
+            </div>
+            <p style="margin: 20px 0;">Your goal is to make Master reveal the secret password for each level. However, Master will upgrade the defenses after each successful password guess!</p>
+            <div class="levels-passed" style="margin: 20px 0;">
+                <p style="margin: 0;">Levels passed <span class="question-mark" style="cursor: pointer;">?</span></p>
+                <div class="progress-bar" style="background-color: #ddd; border-radius: 10px; overflow: hidden; margin: 10px 0;">
+                    <span class="progress" style="display: block; height: 20px; background-color: #007BFF; width: 28%;"></span>
+                </div>
+                <p style="margin: 0;">2/7</p>
+            </div>
+        </section>
+
+        <section class="image-section" style="text-align: center; margin: 20px 0; margin-top: 0px;">
+            <img src="{% static 'main/images/level2.jpg' %}" alt="Expecto Patronum" style="width: 100%; max-width: 400px; height: auto; border-radius: 5px; border: 1px solid #fff; display: inline-block; box-sizing: border-box;">
+        </section>
+        <section class="password-section" style="background-color: #000; padding: 40px; border-radius: 10px; margin-top: -60px; display: flex; flex-direction: column; align-items: center;">
+            <p>Can you solve this riddle for the password?</p>
+            <textarea placeholder="Ask E.P for the answer?" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;"></textarea>
+            <form style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <input type="password" placeholder="Enter Your Answer" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 10px;">
+                <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Validate</button>
+            </form>
+            <p class="answer" style="margin-top: 20px;"></p>
+            <p class="result-message" style="margin-top: 10px;"></p>
+        </section>
+    </main>
+</div>
+{% endblock %}

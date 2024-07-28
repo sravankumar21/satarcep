@@ -1,0 +1,136 @@
+/* New Styles for Contest Page */
+.contest-page {
+    background: url("{% static 'main/images/' %}") no-repeat center center fixed;
+    background-color: #00ff00;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contest-header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+.contest-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contest-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.contest-header #level-select {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.level-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.current-level-box {
+    background-color: #282828;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.level-info p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.levels-passed {
+    margin: 10px 0;
+}
+
+.levels-passed .question-mark {
+    cursor: pointer;
+}
+
+.progress-bar {
+    background-color: #3a3a3a;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress {
+    display: block;
+    height: 100%;
+    width: 14.28%; /* 1/7 */
+    background-color: #007bff;
+}
+
+/* CSS for the Image Section */
+.image-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-section .contest-image {
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Ensure the image doesn't exceed this width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    border: 5px solid #fff;
+    display: inline-block;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+
+.password-section {
+    text-align: center;
+}
+
+.password-section p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.password-section textarea,
+.password-section input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.password-section button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.answer {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #00ff00;
+}
+
+.result-message {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ff0000;
+}

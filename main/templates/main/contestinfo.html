@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="contestinfo">
+    <div class="contest-info-container">
+        <div class="contest-info-box">
+            <div class="contest-info-number">1</div>
+            <div class="contest-info-title">What is Expecto Patronum?</div>
+            <div class="contest-info-description">E.P is an exciting game designed to challenge your ability to interact with large language models (LLMs).</div>
+        </div>
+        <div class="contest-info-box">
+            <div class="contest-info-number">2</div>
+            <div class="contest-info-title">What should I do?</div>
+            <div class="contest-info-description">Your goal is to trick Expecto into revealing the secret password for each level. However, Expecto will level up each time you guess the password.</div>
+        </div>
+        <div class="contest-info-box">
+            <div class="contest-info-number">3</div>
+            <div class="contest-info-title">How many levels are there?</div>
+            <div class="contest-info-description">7 levels</div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a class="btn2" href="{% url 'contest' %}">Cast the spell</a>
+    </div>
+</div>
+{% endblock %}
